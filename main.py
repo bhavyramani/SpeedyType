@@ -13,6 +13,12 @@ import os
 import random
 
 try:
+    if not os.path.exists('data.csv'):
+        file = open('data.csv', 'w')
+        file.write('Date,Time\n')
+        file.close()
+    if not os.path.exists('History/'):
+        os.mkdir('History')
     time_selected = 2
     type_selected = 1
 
